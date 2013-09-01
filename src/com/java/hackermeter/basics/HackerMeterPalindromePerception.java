@@ -1,6 +1,6 @@
 package com.java.hackermeter.basics;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Solution for HackerMeter Basics: PalindromePerception.
