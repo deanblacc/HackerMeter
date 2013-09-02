@@ -3,7 +3,17 @@ package com.java.hackermeter.basics;
 import java.util.*;
 
 /**
- * Solution for HackerMeter Basics:Fibonacci.
+ * The Fibonacci sequence is a sequence in which each term is the sum of the two previous terms, like so:
+ * F(0) = 0
+ * F(1) = 1
+ * F(2) = 1
+ * F(3) = 2
+ * F(4) = 3
+ * …
+ * We want to write a function that prints the first X numbers of the sequence.
+ * The first line of the input will be an integer N (1 <= N <= 100).
+ * Each of the following N lines represents a single test case, containing an integer X (1 <= X <= 90).
+ * For each test case, print the first X numbers of the Fibonacci sequence, one per line. No blank line between test cases.
  */
 public class HackerMeterFibonacci {
     public static void run(Scanner scanner) {
