@@ -10,10 +10,11 @@ import java.util.*;
  * *Note* each string will end with '\n' given each line has only one string(test case)
  * For each test case, print 'Y' if S is a palindrome and 'N' if not. No blank line between test cases.
  */
-public class HackerMeterPalindromePerception {
+public class PalindromePerception {
     public static void run(Scanner scanner) {
         //Code here!
         String palindrome = scanner.nextLine();
+        String[] p = scanner.nextLine().split(" ");
 
         for(int idx = 0; idx < (palindrome.length()/2)+1; idx++) {
             int left = idx, right = palindrome.length() - idx - 1;
@@ -33,3 +34,4 @@ public class HackerMeterPalindromePerception {
         }
     }
 }
+

@@ -10,7 +10,7 @@ import java.util.*;
  * Each of the following N lines represents a single test case, containing an integer X (1 <= X <= 100000).
  * For each test case, print 'Y' if X is a happy number, and 'N' if not. No blank line between test cases.
  */
-public class HackerMeterNumericalNirvana {
+public class NumericalNirvana {
     public static void run(Scanner scanner) {
         //Code here!
         String numStr = scanner.nextLine();

@@ -12,7 +12,7 @@ import java.util.*;
  * with the smaller one first. No blank line between test cases.
  */
 
-public class HackerMeterDoubleDuplicates {
+public class DoubleDuplicates {
     public static void run(Scanner scanner) {
         // Code here!
         int x = Integer.parseInt(scanner.nextLine());
