@@ -38,7 +38,7 @@ public class AmbiguousAlphabet {
     public static int perms(int[] s, int count) {
         //base case
         for(int i = 0; i < s.length; i++) {
-            if(s[i] > 26 || s[i] < 1)   //what about 10 ? its valid. fix this !
+            if(s[i] > 26 || s[i] < 1)   //what about if that 0 was actually 10/20 ? fix this !
                 return count;
         }
 
@@ -51,7 +51,7 @@ public class AmbiguousAlphabet {
                 s2[j-1] = s2[j-1]%10;
             s2[j] = (s[j-1]*10) + s[j];
 
-            count = perms(Arrays.copyOfRange(s2, j, s2.length), count); //25,7
+            count = perms(Arrays.copyOfRange(s2, j, s2.length), count);
         }
 
         return count;
