@@ -23,7 +23,7 @@ public class AmbiguousAlphabet {
     public static void run(Scanner scanner) {
         //Code here!
         String numStr = scanner.nextLine();
-        //String numStr = "25114";
+        //String numStr = "25110";
         int length = numStr.toCharArray().length;
         int[] s = new int[length];
 
@@ -38,7 +38,10 @@ public class AmbiguousAlphabet {
     public static int perms(int[] s, int count) {
         //base case
         for(int i = 0; i < s.length; i++) {
-            if(s[i] > 26 || s[i] < 1)   //what about if that 0 was actually 10/20 ? fix this !
+            if(s[0] == 0 ||                         //kinda sloppy, i know
+                    s[i] > 26 ||                    //what comes after 'Z' ?
+                    (s[i] == 0 && s[i-1] > 2) ||    //is it 0 or 20 ?
+                    (s[i] == 0 && s[i-1] < 1))      //it it 0 or 10 ? ( merge with prev statement ?)
                 return count;
         }
 
@@ -47,6 +50,7 @@ public class AmbiguousAlphabet {
         for(int j = 1; j < s.length; j++) {
             int[] s2 = Arrays.copyOf(s, s.length);
 
+            if(s2[j-1] == 0) continue;
             if(s2[j-1] > 9)
                 s2[j-1] = s2[j-1]%10;
             s2[j] = (s[j-1]*10) + s[j];
@@ -67,3 +71,4 @@ public class AmbiguousAlphabet {
         }
     }
 }
+
